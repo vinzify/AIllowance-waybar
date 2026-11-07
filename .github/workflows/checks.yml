@@ -1,0 +1,19 @@
+name: Checks
+on:
+  push:
+  pull_request:
+permissions:
+  contents: read
+jobs:
+  test:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - name: Install check dependencies
+        run: sudo apt-get update && sudo apt-get install -y jq shellcheck
+      - name: Offline module and installer tests
+        run: python3 -m unittest discover -s tests -v
+      - name: Shell syntax and lint
+        run: |
+          bash -n scripts/codex-usage.sh scripts/codex-usage-refresh.sh
+          shellcheck scripts/*.sh
