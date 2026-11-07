@@ -1,0 +1,10 @@
+__pycache__/
+*.py[cod]
+.venv/
+.cache/
+*.log
+dist/
+*-usage.json
+auth.json
+.env
+.env.*

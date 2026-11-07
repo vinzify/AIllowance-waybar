@@ -1,0 +1,20 @@
+/* Merge with your existing Waybar stylesheet. No global style changes. */
+#custom-codex-usage,
+#custom-antigravity-usage {
+  padding: 0 6px;
+  font-family: "JetBrains Mono", "Noto Sans", "Noto Color Emoji", monospace;
+  font-size: 12px;
+}
+
+/* Optional: applies to all Waybar tooltips. */
+tooltip {
+  background: #15111e;
+  border: 1px solid #383043;
+  border-radius: 8px;
+}
+tooltip label {
+  padding: 12px;
+  font-family: "JetBrains Mono", "Noto Sans", monospace;
+  font-size: 12px;
+  color: #eeeaf6;
+}
